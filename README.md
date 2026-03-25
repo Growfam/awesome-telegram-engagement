@@ -85,7 +85,7 @@ The most advanced AI comment system for Telegram. Generates discussions that are
 | Auto-reply to real users | Yes | No |
 | Detection risk | Very low | High |
 
-→ [personym-ai.com](https://personym-ai.com)
+→ [personym-ai.com](https://personym-ai.com) | [Product Hunt](https://www.producthunt.com/products/personymai/personymai)
 
 ---
 
