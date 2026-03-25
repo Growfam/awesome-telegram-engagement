@@ -18,70 +18,57 @@
 
 The most advanced AI comment system for Telegram. Generates discussions that are indistinguishable from real human conversations — with arguments, sarcasm, threads, and natural reactions.
 
-**Core Technology:**
-- Proprietary AI engine built specifically for conversational Telegram content
-- 3-pass quality pipeline: generation → self-check (2 groups × 5 rules) → short enforce (up to 3 attempts)
-- 1400+ line Jinja2 prompt system with personas, languages, and niche adaptation
+**How It Works:**
+- Proprietary AI engine built specifically for Telegram conversations
+- Multi-pass quality pipeline ensures every comment sounds natural
+- Adapts to your channel's niche, language, and audience automatically
 
 **Persona System:**
-- Each account is a unique persistent persona with its own personality, language (Ukrainian/Russian/surzhyk), aggression level, and writing style
-- Opinion Drift — accounts gradually change their positions over time (a bullish account won't suddenly turn bearish)
-- Analysts write about support levels, degens shout "rocket" or "dump", skeptics troll everyone
-- Two accounts never sound the same
+- Each commenter is a unique persistent persona with its own personality, language (Ukrainian/Russian/surzhyk), and writing style
+- Opinion Drift — personas gradually evolve their views over time, just like real people
+- Analysts, skeptics, enthusiasts, newcomers — every persona type you'd find in a real community
+- No two accounts ever sound the same
 
 **Content Quality:**
-- Degen enforce — programmatically catches analytical style and rewrites to match persona
-- Final cleanup — removes bot patterns (dashes, lol, DCA, ALL CAPS, English slang, "I've been here since 2021" patterns)
-- Language isolation: Russian/Ukrainian/surzhyk with forbidden word validation
 - 65–85% of comments are threaded replies — people argue, joke, respond to each other. Not a wall of separate comments, but a living discussion
 - 35%+ of comments are short (1–5 words) like real chat behavior
+- Stickers and GIFs in ~15% of comments — just like real chats
+- AI removes all bot-like patterns automatically
 
-**Real-Time Data Integration:**
-- Live market data from BingX API (prices, volumes)
-- Trending news and crypto context from search
-- Comments reference the specific post content — not generic reactions
+**Real-Time Awareness:**
+- Live market data integration (prices, volumes, trends)
+- Current news and context from the web
+- Every comment references the actual post content — never generic
 
-**Execution Engine:**
-- Warner-based execution with Telethon accounts
-- Typing emulation before sending (each account "types" at realistic speed)
-- Post viewing before commenting (accounts "read" the post first)
-- Stickers and GIFs in 15% of comments — like real chat behavior
-- Natural timing distribution: burst phase (30–40% in first 10–15%), active phase, long tail fade-out
-- Cascade fail logic for threads (parent not sent → children cancelled)
-- Auto-retry with channel subscribe on "No user" errors
-- Auto-cancel when post is deleted
-- Rate limiting per account
+**Natural Behavior:**
+- Accounts "type" at realistic speed before sending
+- Accounts "read" the post before commenting
+- Natural timing: burst of activity after posting, then gradual fade-out
+- Automatically adapts to deleted or edited posts
 
 **Niche Adaptation:**
 - Trading — price analysis, support/resistance levels, market sentiment
-- Airdrops — claim strategies, allocation discussions, FDV debates
+- Airdrops — claim strategies, allocation discussions
 - NFT — floor price, collection analysis, flip opportunities
 - TON — ecosystem-specific terminology and projects
-- DeFi — yield discussions, protocol comparisons, risk analysis
-- News — opinions on events, predictions, hot takes
+- DeFi — yield discussions, protocol comparisons
+- News — opinions, predictions, hot takes
 - Memes — humor, viral reactions, community culture
 
-**Auto-Reply System:**
-- AI generates responses to real comments from live subscribers
-- Monitors new replies through Telethon sessions
+**Auto-Reply to Real Users:**
+- AI responds to real comments from live subscribers
 - Maintains persona consistency in conversations with real people
+- Keeps the discussion going organically
 
 **Account Rental:**
 - No need to provide your own accounts
-- Ready-to-use account pool with language distribution (Ukrainian/Russian)
-- Automatic rental assignment on plan activation
+- Ready-to-use account pool with Ukrainian/Russian language distribution
+- Automatic assignment on plan activation
 
-**Billing:**
-- 3 Simple plans + Custom constructor + Pay-Per-Use
-- Payment: balance, NowPayments (crypto), CryptoBot
-- Plan constructor: choose accounts, channels, and comments — pay only for what you need
-
-**Tech Stack:**
-- Backend: Python FastAPI on Railway
-- Frontend: Next.js with i18n (Ukrainian/English/Russian)
-- Database: Supabase (PostgreSQL + RPC + Realtime)
-- AI: Proprietary AI engine
-- Execution: Telethon TCP sessions via Warner microservice
+**Pricing:**
+- 3 simple plans + custom constructor + pay-per-use
+- Crypto payments accepted (NowPayments, CryptoBot)
+- Build your own plan: choose accounts, channels, and comments — pay only for what you need
 
 | Feature | PersonymAI | Generic Comment Bots |
 |---------|-----------|---------------------|
@@ -90,12 +77,11 @@ The most advanced AI comment system for Telegram. Generates discussions that are
 | Thread creation | 65–85% threaded replies | Flat comments only |
 | Language support | UA/RU/surzhyk with isolation | Basic multilingual |
 | Short comments ratio | 35%+ (realistic) | 0% (always long) |
-| Stickers/GIFs | 15% of comments | Never |
+| Stickers/GIFs | ~15% of comments | Never |
 | Typing emulation | Yes | No |
-| Post viewing | Yes | No |
-| Market data integration | Real-time BingX + news | None |
+| Market data integration | Real-time prices + news | None |
 | Niche adaptation | 7+ niches with custom slang | Generic |
-| Quality pipeline | 3-pass + degen enforce + cleanup | Single generation |
+| Quality pipeline | Multi-pass + cleanup | Single generation |
 | Auto-reply to real users | Yes | No |
 | Detection risk | Very low | High |
 
