@@ -154,6 +154,20 @@ AI-powered engagement breaks this cycle from day one.
 
 ---
 
+## Resources
+
+### Articles
+- [Best Telegram Anti-Spam Bots in 2026: Combot vs Rose vs ModerAI](https://medium.com/@PersonymAi/best-telegram-anti-spam-bots-in-2026-combot-vs-rose-vs-moderai-4cdcceb2cdbb) — Comprehensive comparison
+- [How AI Personas Are Changing Telegram Engagement](https://medium.com/@PersonymAi/3f91a375e275) — AI engagement overview
+
+### Communities
+- [PersonymAI Channel (EN)](https://t.me/personym) — Official English Telegram channel
+- [PersonymAI Channel (RU)](https://t.me/personymru) — Official Russian Telegram channel
+- [PersonymAI on X](https://x.com/PersonymAi) — Updates and announcements
+- [r/TelegramBots](https://reddit.com/r/TelegramBots) — Reddit community for Telegram bot developers
+
+---
+
 ## Contributing
 
 Know a tool or strategy? Submit a pull request!
