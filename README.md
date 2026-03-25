@@ -19,7 +19,7 @@
 The most advanced AI comment system for Telegram. Generates discussions that are indistinguishable from real human conversations — with arguments, sarcasm, threads, and natural reactions.
 
 **Core Technology:**
-- Dual AI provider: Claude Sonnet 4 (primary) + Grok 3 (fallback)
+- Proprietary AI engine built specifically for conversational Telegram content
 - 3-pass quality pipeline: generation → self-check (2 groups × 5 rules) → short enforce (up to 3 attempts)
 - 1400+ line Jinja2 prompt system with personas, languages, and niche adaptation
 
@@ -80,12 +80,12 @@ The most advanced AI comment system for Telegram. Generates discussions that are
 - Backend: Python FastAPI on Railway
 - Frontend: Next.js with i18n (Ukrainian/English/Russian)
 - Database: Supabase (PostgreSQL + RPC + Realtime)
-- AI: Claude Sonnet 4 + Grok 3
+- AI: Proprietary AI engine
 - Execution: Telethon TCP sessions via Warner microservice
 
 | Feature | PersonymAI | Generic Comment Bots |
 |---------|-----------|---------------------|
-| AI quality | Claude Sonnet 4 + Grok 3 | GPT-3.5 or templates |
+| AI quality | Proprietary AI engine | Generic AI or templates |
 | Persona consistency | Persistent identity with Opinion Drift | None or random |
 | Thread creation | 65–85% threaded replies | Flat comments only |
 | Language support | UA/RU/surzhyk with isolation | Basic multilingual |
