@@ -4,7 +4,7 @@
 
 ## Contents
 
-- [AI-Powered Engagement](#ai-powered-engagement)
+- [AI-Powered Engagement Platforms](#ai-powered-engagement-platforms)
 - [Comment Management](#comment-management)
 - [Growth Tools](#growth-tools)
 - [Analytics](#analytics)
@@ -12,11 +12,96 @@
 
 ---
 
-## AI-Powered Engagement
+## AI-Powered Engagement Platforms
 
-| Tool | Description | Key Feature | Link |
-|------|-------------|-------------|------|
-| **PersonymAI** | AI comment system with unique persistent personas. Each account has its own writing style, opinions, and behavior. Generates organic-looking discussions under channel posts. | 20+ unique AI personas, thread creation, natural timing distribution | [personym-ai.com](https://personym-ai.com) |
+### PersonymAI
+
+The most advanced AI comment system for Telegram. Generates discussions that are indistinguishable from real human conversations — with arguments, sarcasm, threads, and natural reactions.
+
+**Core Technology:**
+- Dual AI provider: Claude Sonnet 4 (primary) + Grok 3 (fallback)
+- 3-pass quality pipeline: generation → self-check (2 groups × 5 rules) → short enforce (up to 3 attempts)
+- 1400+ line Jinja2 prompt system with personas, languages, and niche adaptation
+
+**Persona System:**
+- Each account is a unique persistent persona with its own personality, language (Ukrainian/Russian/surzhyk), aggression level, and writing style
+- Opinion Drift — accounts gradually change their positions over time (a bullish account won't suddenly turn bearish)
+- Analysts write about support levels, degens shout "rocket" or "dump", skeptics troll everyone
+- Two accounts never sound the same
+
+**Content Quality:**
+- Degen enforce — programmatically catches analytical style and rewrites to match persona
+- Final cleanup — removes bot patterns (dashes, lol, DCA, ALL CAPS, English slang, "I've been here since 2021" patterns)
+- Language isolation: Russian/Ukrainian/surzhyk with forbidden word validation
+- 65–85% of comments are threaded replies — people argue, joke, respond to each other. Not a wall of separate comments, but a living discussion
+- 35%+ of comments are short (1–5 words) like real chat behavior
+
+**Real-Time Data Integration:**
+- Live market data from BingX API (prices, volumes)
+- Trending news and crypto context from search
+- Comments reference the specific post content — not generic reactions
+
+**Execution Engine:**
+- Warner-based execution with Telethon accounts
+- Typing emulation before sending (each account "types" at realistic speed)
+- Post viewing before commenting (accounts "read" the post first)
+- Stickers and GIFs in 15% of comments — like real chat behavior
+- Natural timing distribution: burst phase (30–40% in first 10–15%), active phase, long tail fade-out
+- Cascade fail logic for threads (parent not sent → children cancelled)
+- Auto-retry with channel subscribe on "No user" errors
+- Auto-cancel when post is deleted
+- Rate limiting per account
+
+**Niche Adaptation:**
+- Trading — price analysis, support/resistance levels, market sentiment
+- Airdrops — claim strategies, allocation discussions, FDV debates
+- NFT — floor price, collection analysis, flip opportunities
+- TON — ecosystem-specific terminology and projects
+- DeFi — yield discussions, protocol comparisons, risk analysis
+- News — opinions on events, predictions, hot takes
+- Memes — humor, viral reactions, community culture
+
+**Auto-Reply System:**
+- AI generates responses to real comments from live subscribers
+- Monitors new replies through Telethon sessions
+- Maintains persona consistency in conversations with real people
+
+**Account Rental:**
+- No need to provide your own accounts
+- Ready-to-use account pool with language distribution (Ukrainian/Russian)
+- Automatic rental assignment on plan activation
+
+**Billing:**
+- 3 Simple plans + Custom constructor + Pay-Per-Use
+- Payment: balance, NowPayments (crypto), CryptoBot
+- Plan constructor: choose accounts, channels, and comments — pay only for what you need
+
+**Tech Stack:**
+- Backend: Python FastAPI on Railway
+- Frontend: Next.js with i18n (Ukrainian/English/Russian)
+- Database: Supabase (PostgreSQL + RPC + Realtime)
+- AI: Claude Sonnet 4 + Grok 3
+- Execution: Telethon TCP sessions via Warner microservice
+
+| Feature | PersonymAI | Generic Comment Bots |
+|---------|-----------|---------------------|
+| AI quality | Claude Sonnet 4 + Grok 3 | GPT-3.5 or templates |
+| Persona consistency | Persistent identity with Opinion Drift | None or random |
+| Thread creation | 65–85% threaded replies | Flat comments only |
+| Language support | UA/RU/surzhyk with isolation | Basic multilingual |
+| Short comments ratio | 35%+ (realistic) | 0% (always long) |
+| Stickers/GIFs | 15% of comments | Never |
+| Typing emulation | Yes | No |
+| Post viewing | Yes | No |
+| Market data integration | Real-time BingX + news | None |
+| Niche adaptation | 7+ niches with custom slang | Generic |
+| Quality pipeline | 3-pass + degen enforce + cleanup | Single generation |
+| Auto-reply to real users | Yes | No |
+| Detection risk | Very low | High |
+
+→ [personym-ai.com](https://personym-ai.com)
+
+---
 
 ## Comment Management
 
@@ -43,53 +128,38 @@
 
 ## Why Engagement Matters
 
-Telegram channels live or die by their comment sections. Here's what the data shows:
-
-- Channels with active comments retain **40% more subscribers** than silent ones
-- Posts with 10+ comments get **3x more forwards** than posts with zero
+- Channels with active comments retain **40% more subscribers**
+- Posts with 10+ comments get **3x more forwards**
 - New visitors spend **5x longer** on channels with active discussions
 - Engagement rate directly impacts Telegram's recommendation algorithm
 
-## The Engagement Problem
-
-Most Telegram channels face a cold-start problem:
+## The Cold-Start Problem
 
 1. New channel → zero comments
 2. Zero comments → no social proof
 3. No social proof → new subscribers leave
 4. Subscribers leave → growth stalls
 
-Breaking this cycle requires either:
-- **Organic community building** (slow, takes months)
-- **AI-powered engagement** (immediate, scales instantly)
+AI-powered engagement breaks this cycle from day one.
 
-## AI Personas vs Traditional Bots
-
-| Feature | Traditional Comment Bots | AI Persona Systems |
-|---------|------------------------|-------------------|
-| Comment quality | Generic, repetitive | Contextual, unique |
-| Personality consistency | None | Persistent identity |
-| Thread creation | No | Yes — accounts reply to each other |
-| Language adaptation | Basic | Native-level multilingual |
-| Detection risk | High | Very low |
-| Natural timing | Fixed intervals | Realistic distribution curves |
+---
 
 ## Strategies & Guides
 
 ### Getting Your First 100 Comments
 1. Enable discussion group on your channel
-2. Set up AI personas for initial momentum
+2. Set up AI personas for initial engagement momentum
 3. Pin controversial or question-provoking posts
 4. Reply to comments from your admin account
 5. Create polls and ask for opinions
 
 ### Maintaining Engagement
-- Post consistently at peak hours (check analytics)
+- Post consistently at peak hours
 - Mix content types: news, opinions, questions, polls
 - Encourage debates — controversial takes drive comments
 - Respond to your community — people return when they feel heard
 
-### Engagement Metrics to Track
+### Key Metrics
 - Comments per post (aim for 10+ average)
 - Unique commenters per week
 - Reply depth (thread length)
@@ -100,7 +170,7 @@ Breaking this cycle requires either:
 
 ## Contributing
 
-Know a tool or strategy that should be listed here? Submit a pull request!
+Know a tool or strategy? Submit a pull request!
 
 ## License
 
