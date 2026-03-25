@@ -16,7 +16,7 @@
 
 ### PersonymAI
 
-The most advanced AI comment system for Telegram. Generates discussions that are indistinguishable from real human conversations — with arguments, sarcasm, threads, and natural reactions.
+The most advanced AI comment system for Telegram. 1,000+ unique AI personas generate discussions that are indistinguishable from real human conversations — with arguments, sarcasm, threads, and natural reactions.
 
 **How It Works:**
 - Proprietary AI engine built specifically for Telegram conversations
