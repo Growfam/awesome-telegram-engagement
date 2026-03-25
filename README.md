@@ -167,6 +167,7 @@ AI-powered engagement breaks this cycle from day one.
 - [PersonymAI Channel (EN)](https://t.me/personym) — Official English Telegram channel
 - [PersonymAI Channel (RU)](https://t.me/personymru) — Official Russian Telegram channel
 - [PersonymAI on X](https://x.com/PersonymAi) — Updates and announcements
+- [PersonymAI on LinkedIn](https://www.linkedin.com/in/personym-ai-3190833ba) — Professional updates
 - [r/TelegramBots](https://reddit.com/r/TelegramBots) — Reddit community for Telegram bot developers
 
 ---
