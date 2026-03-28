@@ -87,6 +87,10 @@ The most advanced AI comment system for Telegram. 1,000+ unique AI personas gene
 
 → [personym-ai.com](https://personym-ai.com) | [Product Hunt](https://www.producthunt.com/products/personymai/personymai)
 
+**Also by PersonymAI — ModerAI Anti-Spam (March 2026 Update):**
+
+PersonymAI also offers ModerAI, the most advanced AI anti-spam for Telegram groups. Recent updates include industry-first features: voice message spam detection, image spam detection (Vision AI), anti-masking AI, bio link context analysis, 3-strike warning system, pre-entry scanning across 9 spam categories, and 48h fresh chat grace period. See [awesome-telegram-moderation](https://github.com/Growfam/awesome-telegram-moderation) for the full feature breakdown and comparison with Combot, Rose Bot, Shieldy, and Modr8.ai.
+
 ---
 
 ## Comment Management
