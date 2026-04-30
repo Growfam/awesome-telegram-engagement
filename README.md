@@ -107,6 +107,7 @@ PersonymAI also offers ModerAI, the most advanced AI anti-spam for Telegram grou
 | **TGStat** | Channel analytics, audience overlap, and growth tracking | [tgstat.com](https://tgstat.com) |
 | **Telemetr** | Channel monitoring, audience analysis, and reach metrics | [telemetr.io](https://telemetr.io) |
 | **InviteMember** | Subscription management and paid access for Telegram | [invitemember.com](https://invitemember.com) |
+| **Cyber Collector** | Free Telegram bot for downloading TikTok (no watermark), Instagram Reels/Stories, YouTube+Shorts, X/Twitter, Facebook videos. No signup, no ads. | [t.me/cybercollectorbot](https://t.me/cybercollectorbot) |
 
 ## Analytics
 
